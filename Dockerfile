@@ -12,7 +12,7 @@ FROM nginx
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /usr/src/beerpong-fe/dist /usr/share/nginx/html
 
-RUN envsubst < /usr/share/nginx/html/assets/env.js > /usr/share/nginx/html/assets/env.js
+RUN envsubst < /usr/share/nginx/html/assets/env.template.js > /usr/share/nginx/html/assets/env.js
 
 EXPOSE 80
 
