@@ -1,0 +1,11 @@
+<div>
+  <h1>Users:</h1>
+  <button mat-fab color="primary" routerLink="./new">
+    <mat-icon>add</mat-icon>
+  </button>
+  <mat-action-list *ngIf="users">
+    <mat-list-item *ngFor="let user of users" routerLink="./{{user.id}}">{{user.email}}<br />{{user.name}}
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-action-list>
+</div>

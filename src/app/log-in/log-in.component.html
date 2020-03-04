@@ -1,0 +1,21 @@
+<div class="centered">
+  <form>
+    <div *ngIf="!currentUser">
+      <h2>Log In</h2>
+      <mat-form-field class="fullWidth">
+        <input matInput placeholder="Email" required="true" [formControl]="emailFormControl">
+      </mat-form-field>
+      <mat-form-field class="fullWidth">
+        <input matInput placeholder="Password" type="password" required="true" [formControl]="passwordFormControl">
+      </mat-form-field>
+      <button mat-flat-button color="primary" *ngIf="isAdministrationLoging" (click)="loginAdministartion()">Log
+        In</button>
+    </div>
+    <div *ngIf="currentUser">
+      <h2 style="text-align: center;">Du bist als <span style="text-decoration: underline;">{{currentUser.name}}</span> eingeloggt.</h2>
+    </div>
+    <button mat-flat-button color="primary" *ngIf="isApplicationLogin && currentUser" (click)="loginApplication()">Log In to
+      {{applicationName}}</button>
+      <button mat-flat-button color="primary" *ngIf="isApplicationLogin && !currentUser" (click)="loginApplication()">Log In</button>
+  </form>
+</div>

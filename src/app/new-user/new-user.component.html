@@ -1,0 +1,14 @@
+
+  <form>
+      <h2>Log In</h2>
+      <mat-form-field class="fullWidth">
+        <input matInput placeholder="Email" required="true" [formControl]="emailFormControl">
+      </mat-form-field>
+      <mat-form-field class="fullWidth">
+        <input matInput placeholder="Name" required="true" [formControl]="nameFormControl">
+      </mat-form-field>
+      <mat-form-field class="fullWidth">
+        <input matInput placeholder="Password" type="password" required="true" [formControl]="passwordFormControl">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="create()">Erstellen</button>
+  </form>

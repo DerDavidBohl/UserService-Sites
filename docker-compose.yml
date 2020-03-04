@@ -1,0 +1,20 @@
+version: '3'
+services:
+  api:
+    image: davidbohl/user-service-api
+    restart: always
+    ports:
+      - "5000:3000"
+    links:
+      - user-service-mongo
+    depends_on:
+      - user-service-mongo
+    env_file: environment_api.env
+  user-service-mongo:
+    container_name: user-service-mongo
+    image: mongo
+    ports:
+      - "27117:27017"
+    volumes:
+      - /userservice/data:/data/db
+    env_file: environment_mongo.env

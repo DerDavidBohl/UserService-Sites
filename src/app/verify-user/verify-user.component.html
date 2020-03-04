@@ -1,0 +1,13 @@
+<div style="text-align: center;" *ngIf="success">
+  <h1>Fertig!</h1>
+  Dein Account wurde erfolgreich verifiziert!
+</div>
+<div style="text-align: center;" *ngIf="failure">
+  <h1>Fehler!</h1>
+  Dein Account konnte nicht verifiziert werden!
+</div>
+<div style="text-align: center;" *ngIf="!failure && !success">
+  <h1>Verifizierung...</h1>
+  Dein Account wird verifiziert...
+</div>
+

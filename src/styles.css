@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.marginTop {
+  margin-top: 10px;
+}
+
+.marginAll {
+    margin: 10px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.centered {
+    max-width: 500px;
+    max-height: 500px;
+    margin-top: 10px;
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto
+}

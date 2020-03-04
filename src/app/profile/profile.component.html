@@ -1,0 +1,9 @@
+<div *ngIf="currentUser">
+  <h1>Profil:</h1>
+  <h3>Name: {{currentUser.name}}</h3>
+  <h3>Email: {{currentUser.email}}</h3>
+</div>
+<div *ngIf="roles">
+  <h1>Rollen:</h1>
+  <li *ngFor="let role of roles">{{role}}</li>
+</div>

@@ -1,0 +1,15 @@
+<div *ngIf="user">
+  <h1>{{user.name}}</h1>
+  {{user.email}}
+</div>
+<form class="marginTop" (submit)="addRole()">
+  <mat-form-field class="fullWidth">
+    <input matInput placeholder="Rolle hinzufügen" [formControl]="addRoleFormControl">
+  </mat-form-field>
+  <!-- <button mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button> -->
+</form>
+<mat-list *ngIf="roles">
+  <mat-list-item *ngFor="let role of roles"><button mat-icon-button (click)="removeRole(role)"><mat-icon>delete</mat-icon></button>{{role}}<mat-divider></mat-divider></mat-list-item>
+</mat-list>
