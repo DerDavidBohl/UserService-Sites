@@ -16,4 +16,4 @@ RUN envsubst < /usr/share/nginx/html/assets/env.js > /usr/share/nginx/html/asset
 
 EXPOSE 80
 
-CMD /usr/share/beerpong-fe/setEnv.sh && nginx -g 'daemon off;'
+CMD nginx -g 'daemon off;'
